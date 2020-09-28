@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model CepViewModel;
+<div class="container">
+    <form asp-action="Index" asp-controller="Home" method="post">
+        <fieldset>
+            <legend>Digite o CEP</legend>
+            <div>
+                <label asp-for="Cep">CEP:</label>
+                <input asp-for="Cep" value="" />
+            </div>
+           
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Consular CEP" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+
+    @ViewData["CepViewModel"]
+</div>
